@@ -10,3 +10,5 @@ class Server {
 
 const server = new Server()
 server.init(new PersonController())
+
+console.log(server)
