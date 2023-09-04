@@ -1,4 +1,4 @@
-import { FacebookAccont } from '@/domain/models'
+import { FacebookAccount } from '@/domain/models'
 
 describe('FacebookAccount', () => {
   const fbData = {
@@ -7,7 +7,7 @@ describe('FacebookAccount', () => {
     facebookId: 'any_fb_id'
   }
   it('Should create with facebook data only', () => {
-    const sut = new FacebookAccont(fbData)
+    const sut = new FacebookAccount(fbData)
     expect(sut).toEqual({
       name: 'any_fb_name',
       email: 'any_fb_email',
@@ -17,7 +17,7 @@ describe('FacebookAccount', () => {
 
   it('Should update name if its empty', () => {
     const accountData = { id: 'any_id' }
-    const sut = new FacebookAccont(fbData, accountData)
+    const sut = new FacebookAccount(fbData, accountData)
     expect(sut).toEqual({
       id: 'any_id',
       name: 'any_fb_name',
@@ -28,7 +28,7 @@ describe('FacebookAccount', () => {
 
   it('Should not update name if its not empty', () => {
     const accountData = { id: 'any_id', name: 'any_name' }
-    const sut = new FacebookAccont(fbData, accountData)
+    const sut = new FacebookAccount(fbData, accountData)
     expect(sut).toEqual({
       id: 'any_id',
       name: 'any_name',

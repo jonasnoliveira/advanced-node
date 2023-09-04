@@ -9,7 +9,7 @@ type FacebookData = {
   facebookId: string
 }
 
-export class FacebookAccont {
+export class FacebookAccount {
   id?: string
   name: string
   email: string
